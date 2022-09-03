@@ -11,6 +11,9 @@ class character:
         self.nickname = nickname
         self.weapons = weapons
         self.weaknesses = weaknesses
+    '''
+    not related methods for this question
+    
     def get_model(self):
         return self.nickname
     def get_year(self):
@@ -19,21 +22,42 @@ class character:
         return self. weaknesses
     def profile(self):
         return self.nickname, self.weapons, self. weaknesses
-
+    '''
     def checks(self, p):
         print("Checks function")
         task = input("What task the character are going to perform(Write,climb,cook)")
         # for climbing a mountain
         if task == "climb":
+            #if p.weaknesses == "slow": if the character's current state is slow, he can't perform a task
             if p.weaknesses != "slow":
                 print("The character can not climb the mountain")
+           
+            #You should check the character's state and items he should bring
+            #elif  ==> if
+            '''
+            if ('rope' in p.weapons) and ('coat' in p.weapons) and ("first aid kit") in p.weapons:
+                print("The character can climb")
+            else:
+                print("The character will not climb a mountain because he doesn't have all items")
 
+            '''
             elif ('rope' in p.weapons) and ('coat' in p.weapons) and ("first aid kit") in p.weapons:
                 print("The character can climb")
 
             else:
                 print("The character will not climb a mountain")
         # For cooking a dish
+        '''
+          if task == "cook":
+            if p.weaknesses == "small":
+                print("The character can not cook")
+
+            if ('pan' in p.weapons) and ('groceries' in p.weapons):
+                print("The character can cook")
+            else:
+                 print("The character can't cool because he doesn't have all items")
+        '''
+        
         if task == "cook":
             if p.weaknesses == "small":
                 print("The character can not cook")
@@ -44,6 +68,17 @@ class character:
             else:
                  print("The character will not Cook")
         # For writing a book
+        '''
+          if task == "write":
+            if p.weaknesses == "confusion":
+                print("The character can not write a book")
+            
+            if ('pen' in p.weapons) and ('paper' in p.weapons) and ("idea") in p.weapons:
+                print("The character can a write a book")
+            else:
+                print("The character can't write a book because he doesn't have all items")
+        '''
+        
         elif task == "write":
             if p.weaknesses != "confusion":
                 print("The character can not write a book")
